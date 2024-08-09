@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap');
+:root{
+    --primary-color: #FF6700;
+    --white: #ffffff;
+    --dark-color: #171717;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+.btn,
+.divider{
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+.header,
+.nav-link:hover,
+.highlight,
+a:hover{
+    color: var(--primary-color)!important;
+}
+header{
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    height: 100vh;
+}
+header, .travel_container, .email-bg, .faq-container, .testimonial{
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.testimonial::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.269);
+}
+.card-txt-container, .card-container{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: -4rem;
+}
+.card-container{
+    top: -10.5rem;
+}
+.nav-container{
+    width: 15rem;
+    z-index: 100;
+    border: 1px solid var(--dark-color);
+    min-height: 100rem !important;
+}
+@keyframes enter{
+    from {
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes hide{
+    from {
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100%);
+        
+    }
+}
+.cp-link{
+    margin: 0%;
+    position: absolute;
+    z-index: 10;
+    top: -10%;
+    right: 0%;
+    height: 120vh!important;
+    animation: enter .7s 2ms ease-in-out;
+    display: none !important;
+}
+.show{
+    display: block!important;
+}
+.hide{
+    display: none!important;
+}
+.bar-btn{
+    display: none;
+}
+.fab, .fas{
+    border: 2px solid var(--primary-color);
+    border-radius: 100%;
+}
+.footer-btn button:nth-last-child(1){
+    background-color: var(--dark-color);
+}
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; 
+}
+
+@media screen and (max-width: 780px) {
+    .btn-container,
+    .list-container{
+        display: none;
+    }
+    .bar-btn{
+        display: block;
+    }
+    .img-container{
+        display: flex;
+        overflow: hidden;
+    }
+}
